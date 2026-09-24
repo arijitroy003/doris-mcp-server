@@ -538,5 +538,5 @@ class DorisADBCQueryTools:
         try:
             if self.adbc_client:
                 self.adbc_client.close()
-        except:
+        except Exception:
             pass 

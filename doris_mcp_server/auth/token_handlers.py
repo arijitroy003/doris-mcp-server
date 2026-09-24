@@ -86,7 +86,7 @@ class TokenHandlers:
                 # POST request with JSON body
                 try:
                     body = await request.json()
-                except:
+                except Exception:
                     return JSONResponse({
                         "error": "Invalid JSON body"
                     }, status_code=400)
@@ -309,7 +309,7 @@ class TokenHandlers:
                 error_data = security_response.body.decode('utf-8') if hasattr(security_response, 'body') else '{"error": "Access denied"}'
                 try:
                     error_info = json.loads(error_data)
-                except:
+                except Exception:
                     error_info = {"error": "Access denied"}
                 
                 error_html = f"""

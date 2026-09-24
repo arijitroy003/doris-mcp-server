@@ -168,7 +168,7 @@ class TokenManager:
                     content = f.read().strip()
                     if content and content != '{}':
                         token_file_exists = True
-            except:
+            except Exception:
                 pass
         
         # Add default tokens only if no custom configuration exists

@@ -513,7 +513,7 @@ class PerformanceAnalyticsTools:
                     else:
                         dt = query_time
                     query_hours.append(dt.hour)
-            except:
+            except Exception:
                 continue
         
         hour_distribution = Counter(query_hours)

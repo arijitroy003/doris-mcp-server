@@ -1818,7 +1818,7 @@ class DorisConnectionManager:
                         if self.pool:
                             try:
                                 self.pool.close()
-                            except:
+                            except Exception:
                                 pass
                             self.pool = None
                     except Exception as e:
